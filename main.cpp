@@ -1,45 +1,33 @@
 #include <iostream>
-#include <string>
-#include <fstream>
+
 using namespace std;
 
 int main()
 {
-    cout << "3/c Charles Leventhal \nTOOP HW2" << endl;
-    string inputFilename;
-    string line;
-    int quantity;
-    double cost;
-    double discount;
-    cout << "How many items are you purchasing?: ";
-    cin >> quantity;
-    cout << "\nHow much does the item cost?: ";
-    cin >> cost;
-    if (0 < quantity) {
-        discount=0;
-        if (11 < quantity){
-          discount= .05;
-           if (45 < quantity){
-             discount= .10;
-                if (250 < quantity)
-                   discount= .15;
+    cout << "Please enter a value: " << endl;
+    int timesToDisplay=1;
+    cin >> timesToDisplay;
 
-           }}}
-cout << "\n You are buying " << quantity << " items at a " << (100*discount) << "% discount cost of $" << (cost * quantity * (1 - discount)) << ". You saved $" << (cost*quantity*discount) << "! \n";
+    while (timesToDisplay > 0) {
+    if (timesToDisplay == 2001)
+    cout << "2001 is #1! \n";
+    else if (timesToDisplay < 21)
+    for (int n = timesToDisplay;n>0;--n){
+    cout << "Go Bears! " << endl; }
+    else
+        cout << "Please enter a smaller number! \n";
+        cin >> timesToDisplay;
+    }
+    switch (timesToDisplay){
+    case -1:
+    cout << "ERROR!";
+    break;
+    case -2:
+    cout << "WINNER, WINNER, CHICKEN DINNER!";
+    break;
+    default:
+    cout << "FAREWELL!";
+    }
 
-ifstream myFile;
-while (inputFilename != "input.txt") {
-cout << "\nPlease enter a filename: ";
-cin >> inputFilename;
-myFile.open (inputFilename, ios::app);
-cout << "\ninputFilename: " << inputFilename<< endl;
-}
-
-
-for (int i=1; i<6 ; i++){
-getline(myFile, line);
-cout << "\n" << i << ". " << line;
-}
-myFile.close();
-
+    return 0;
 }
